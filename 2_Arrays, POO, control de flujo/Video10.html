@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>POO I</title>
+</head>
+
+<body>
+    <input type="button" id="boton1"/>
+    <input type="button" id="boton2"/>    
+    <input type="text" id="micuadro"/>
+    
+    <script>
+        var miboton1 = document.getElementById("boton1");
+        miboton1.style.width = "300px";
+        miboton1.style.height = "300px";
+
+        var miboton2 = document.getElementById("boton2");
+        miboton2.style.width = "300px";
+        miboton2.style.height = "300px";
+        miboton2.focus();
+
+        var cuadroTexto = document.getElementById("micuadro");
+        cuadroTexto.style.backgroundColor = "red";
+        cuadroTexto.value = "Escriba aquí...";
+        cuadroTexto.style.height = "200px";
+        cuadroTexto.style.textAlign = "center";
+        cuadroTexto.style.fontWeight = "bold";
+    </script>
+</body>
+
+</html>

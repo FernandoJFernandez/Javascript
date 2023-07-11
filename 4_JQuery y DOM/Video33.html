@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Video 33</title>
+	<style>
+		#banner{
+			background-color: #F00;
+			width: 450px;
+			height: 300px;
+			position: absolute;
+			left: 400px;
+			top: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+		#img {
+            float: left;
+            margin: 15px;
+            width: 350px;
+            height: 200px;
+		}
+		#sustitucion{
+			float:left;
+            margin: 15px;
+            width: 350px;
+            height: 200px;
+			font-size: 36px;
+		}
+	</style>
+    
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			/*
+            var z = document.getElementById("cerrar");
+			z.addEventListener("click", cerrar_banner, false);
+			*/
+            
+			// Funciones encadenadas
+			document.getElementById("cerrar").addEventListener("click", cerrar_banner, false);
+
+			// Identificación de imagenes
+			document.getElementById("imagen1").addEventListener("click", carrito, false);
+		});
+
+		function cerrar_banner(){
+			$("#banner").remove();
+		}
+
+		function carrito(){
+			$("#imagen1").replaceWith("<div id='sustitucion'>Agregado al carro</div>")
+		}
+	</script>
+</head>
+
+<body>
+	<div id="banner">
+		Banner de Prueba
+		<p id="cerrar">Cerrar</p>
+	</div>
+	<h1>Carro de la compra</h1>
+	<div id="carrete">
+		<img src="imgs/arbol.jpg" id="imagen1" height="200px">
+		<img src="imgs/pajaro.jpg" id="imagen2" height="200px">
+		<img src="imgs/perro.jpg" id="imagen3" height="200px">
+		<img src="imgs/Teide.jpg" id="imagen4" height="200px">
+	</div>
+
+</body>
+</html>

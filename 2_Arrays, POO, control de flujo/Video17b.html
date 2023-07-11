@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Video 17b</title>
+
+    <script>
+        var aleatorio = Math.round(Math.random()*100);
+        var minum, intentos;
+        
+        minum = 0;
+        intentos = 0;
+
+        do{
+            minum = prompt("Introduce un nº entre 0 y 100");
+
+            if(aleatorio > minum){
+                alert("Más alto.");
+            }
+
+            if(aleatorio < minum){
+                alert("Más bajo");
+            }
+
+        }while(aleatorio != minum);
+        alert("Número correcto");
+        
+    </script>
+</head>
+
+<body>
+</body>
+</html>

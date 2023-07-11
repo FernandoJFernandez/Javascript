@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Video 38b</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        div{
+            width:20%;
+            margin:0 50px;
+            float:left;
+            border:#F00 solid 2px;
+            padding:10px;
+        }
+
+        table{
+            width:100%;
+            margin-top:10px;
+        }
+    </style>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var botones = document.querySelectorAll("input");
+            for(i = 0; i<botones.length; i++){
+                botones[i].addEventListener("click", modo_lectura, false);
+            }
+        });
+
+        function modo_lectura(e){
+            var zonaActuacion;
+            if(e.target == m_lectura1){
+                zonaActuacion = "#noticia1";
+            }else if(e.target == m_lectura2){
+                zonaActuacion = "#noticia2";
+            }else if(e.target == m_lectura3){
+                zonaActuacion = "#noticia3";
+            }
+
+            $(zonaActuacion).css({
+                "background-color": "#000",
+                "font-size": "20px",
+                "text-align": "justify",
+                "color": "#FFF"
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h1>NOTICIAS</h1>
+    <div id="noticia1">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptas sint molestiae iusto tenetur vitae quae reprehenderit, nostrum itaque necessitatibus deleniti fuga aut eius laudantium aperiam eveniet, quia dolor. Odio."
+        <table>
+            <tr>
+                <td style="text-align:center"><input type="button" value="Modo Lectura" id="m_lectura1"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="noticia2">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed asperiores eligendi fugit qui nesciunt ullam unde quibusdam dolore magni sequi aperiam, doloribus delectus explicabo voluptatum, veritatis laudantium, consequuntur obcaecati."
+        <table>
+            <tr>
+                <td style="text-align:center"><input type="button" value="Modo Lectura" id="m_lectura2"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="noticia3">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni similique, dolorem molestiae, hic fugit velit aperiam fuga amet consequatur voluptatum doloremque expedita? In molestias hic fugiat, consectetur dignissimos modi magnam!"
+        <table>
+            <tr>
+                <td style="text-align:center"><input type="button" value="Modo Lectura" id="m_lectura3"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
